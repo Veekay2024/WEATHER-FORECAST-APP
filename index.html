@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,1<PASSWORD>;1,2<PASSWORD>;1,3<PASSWORD>;1,4<PASSWORD>;1,5<PASSWORD>;1,6<PASSWORD>;1,7<PASSWORD>;1,8<PASSWORD>;1,9<PASSWORD>&family=Roboto:ital,wght@0,1<PASSWORD>;1,1<PASSWORD>.." rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Weather App</title>
+</head>
+<body>
+    <script src="app.js" defer></script>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+      <div class="logo">
+         <span class="logo-icon">
+          <img src="./assets/images/logo.svg" alt="logo-icon">
+         </span>
+      </div>
+       <button type="button" class="units-btn">
+         <span class="units-icon">
+           <img src="./assets/images/icon-units.svg" alt="units-icon">
+         </span>
+         <span class="units-label">Change Units</span>
+         <span class="units-dropdown">
+           <img src="./assets/images/icon-dropdown.svg" alt="dropdown-icon">
+         </span>
+       </button>
+  </nav>
+  <!-- NAVBAR-END -->
+
+  <!-- MAIN WRAPPER -->
+    <main class="container">
+      <!-- HERO-SECTION -->
+       <section class="hero">
+         <h1>How's the sky looking today?</h1>
+         <div class="search-bar">
+         <div class="search-input-wrap">
+          <span class="search-icon">
+             <img src="./assets/images/icon-search.svg" alt="search-icon">
+           </span>
+            <input id="search-input" type="text" placeholder="Search for a place...">
+          </div>
+          <button id="search-btn" type="button" class="search-btn">Search</button>
+         </div>
+       </section>
+       <!-- HERO-SECTION-END -->
+
+       <!-- CONTENT GRID -->
+        <div class="content-grid">
+           <!-- LEFT COLUMN -->
+            <div class="left-column">
+               <!-- Big Weather Card -->
+                <div class="weather-card">
+                    <div class="weather-card_info">
+                      <div class="weather-card_bg">
+                       <img src="./assets/images/bg-today-large.svg" alt="weather-background" class="weather-bg-img">
+                        <div class="weather-card_content">
+                           <div class="weather-card_meta">
+                               <h2 id="city" class="city">Berlin, Germany</h2>
+                               <p id="date" class="date">Loading forecast…</p>
+                           </div>
+                          <div class="weather-card_temp">
+                         <span id="weather-icon" class="weather-icon" aria-hidden="true">☀️</span>
+                          <span id="temperature" class="temperature">--°</span>
+                       </div>  
+                      </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- Big Weather Card END -->
+
+                  <!-- Stats ROW -->
+                       <div class="stats-row">
+                          <div class="stat-card">
+                            <p class="stat-label">Feels Like</p>
+                            <p id="feels-like" class="stat-value">--°</p>
+                          </div>
+                          <div class="stat-card">
+                            <p class="stat-label">Humidity</p>
+                            <p id="humidity" class="stat-value">--%</p>
+                          </div>
+                           <div class="stat-card">
+                            <p class="stat-label">Wind</p>
+                            <p id="wind" class="stat-value">-- mph</p>
+                           </div>
+                           <div class="stat-card">
+                            <p class="stat-label">Precipitation</p>
+                            <p id="precipitation" class="stat-value">--%</p>
+                           </div>
+                       </div>
+                      <!-- STATS-ROW-END -->
+
+                      <!-- Daily Forecast -->
+                      <div class="daily-section">
+                        <p class="section-title">Daily Forecast</p>
+                        <div id="daily-row" class="daily-row"></div>
+                        <p id="status-message" class="status-message"></p>
+                      </div> 
+
+        </div>
+        </div>
+
+    </main>
+
+
+
+  
+ 
+</body>
+</html>
